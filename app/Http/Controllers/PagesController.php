@@ -275,13 +275,13 @@ class PagesController extends BaseController
 
         $data = ['order'=>$order,'orderDetail'=> $orderDetails,'email'=>$request->email] ;
   
-        Mail::send('mail.blanks', $data, function ($message)  use($data)  {
-            $message->from('shopcoffee.doan2@gmail.com', 'Coffee Shop');
+        // Mail::send('mail.blanks', $data, function ($message)  use($data)  {
+        //     $message->from('shopcoffee.doan2@gmail.com', 'Coffee Shop');
             
            
-            $message->to($data['email'], 'Coffee Shop')->subject("Xác nhận đặt hàng");
+        //     $message->to($data['email'], 'Coffee Shop')->subject("Xác nhận đặt hàng");
          
-        });
+        // });
 
 
         Session::forget('cart') ;

@@ -14,6 +14,7 @@
     
 Route::get('/dashboard', 'ProductController@index');
 
+Route::get('/', 'ProductController@showHomePage');
 Route::get('/home', 'ProductController@showHomePage');
 
 Route::get('/category', 'ProductController@showCategoryPage');
